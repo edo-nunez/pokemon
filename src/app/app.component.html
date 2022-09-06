@@ -1,0 +1,21 @@
+<app-mostrar-imagen
+  [imagen]="imagen"
+></app-mostrar-imagen>
+<app-mostrar-imagen
+  [imagen]="imagen2"
+></app-mostrar-imagen>
+{{ elementosGuardados.length }}
+
+<app-formulario
+(salida)="escucharHijo()"
+(salidaString)="escucharDetalle($event)"
+(enviarDatos)="agregarNuevo($event)"></app-formulario>
+
+<section>
+<app-listar-pokemon
+[pokemones]="elementosGuardados"
+(posIndex)="borrarElemento($event)">
+</app-listar-pokemon>
+</section>
+
+
